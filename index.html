@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Військова топографія</title><meta name="theme-color" content="#2b5f7e">
+<style>body{margin:0;font:16px system-ui,sans-serif;background:#f3f1ea;color:#1d221d;display:grid;place-items:center;min-height:100vh}a{color:#2b5f7e}</style></head>
+<body><p>Відкриваємо курс… <a id="go" href="v2/">Перейти</a></p>
+<script>
+// Open the version this learner is pinned to; first visit → latest. Progress lives in localStorage and is shared by all versions.
+(function () {
+  var s = {}; try { s = JSON.parse(localStorage.getItem('topo.settings')) || {}; } catch (e) {}
+  function go(v) { location.replace(v + '/' + location.hash); }
+  if (s.pinned) return go(s.pinned);
+  fetch('versions.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (j) { go(j.latest || 'v2'); }).catch(function () { go('v2'); });
+})();
+</script></body></html>

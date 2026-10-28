@@ -1,0 +1,16 @@
+{
+  "name": "Військова топографія",
+  "short_name": "Топографія",
+  "description": "Онлайн-курс військової топографії з практикою на навчальних картах",
+  "lang": "uk",
+  "start_url": "../",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#f3f1ea",
+  "theme_color": "#2b5f7e",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
